@@ -110,3 +110,9 @@ jobs:
       - name: Output Package Path
         run: |
           echo "Package built at: ${{ github.workspace }}/main/packages/"
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: YTMusicUltimate-IPA
+          path: main/packages/YTMusicUltimate.ipa
